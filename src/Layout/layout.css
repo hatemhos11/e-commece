@@ -1,0 +1,42 @@
+                    /* =========== HEADER ============ */
+.header{
+    @apply shadow-lg w-full p-4 bg-white dark:bg-slate-800 text-slate-800 dark:text-zinc-200 ;
+}
+.header .container{
+    @apply flex justify-between w-full;
+}
+.header-logo{
+    @apply font-bold ;
+}
+.header-cart-icon{
+    @apply flex justify-center items-center relative hover:scale-125 transition cursor-pointer;
+}
+.cart-count-num{
+    @apply absolute -top-1 -right-1 rounded-full w-4 h-4 
+            bg-red-700 border border-white dark:border-slate-800 font-bold text-white  
+            flex justify-center items-center  ;
+}
+                    
+                    /* =========== FOOTER ============ */
+                    
+.footer{
+    @apply bg-slate-900 text-gray-300 flex items-center justify-center p-4;
+}
+
+                    /* =========== loading ============ */
+.loader {
+    position: absolute;
+    margin: auto;
+    left: 46%;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+    
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,5 @@
+.addBtn{
+    @apply bg-slate-800 text-zinc-300 dark:bg-zinc-300 dark:text-slate-800
+                    py-2 rounded-md hover:opacity-80;
+
+}

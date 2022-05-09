@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routers } from './Routers';
+import { useRef } from "react";
+
+import Header from './Layout/Header'
+import Footer from "./Layout/Footer";
+
+import { ToastContainer } from "react-toastify";
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    const parentDiv = useRef()
+    function ToggleDarkMode(){
+        if(localStorage.getItem('mode')){
+            parentDiv.current.classList.remove('dark')
+            localStorage.setItem('mode', '')
+        }else{
+            parentDiv.current.classList.add('dark')
+            localStorage.setItem('mode','dark')
+        }
+    }
+
+    return (
+        <div ref={parentDiv} className={localStorage.getItem('mode')}>
+            <div className="App">
+                <Header ToggleDarkMode={ToggleDarkMode} />
+
+                <Routers     />
+
+                <Footer />
+            </div>
+
+            <ToastContainer autoClose={2500} limit={5} draggablePercent={60} />
+
+        </div>
+    );
 }
 
 export default App;

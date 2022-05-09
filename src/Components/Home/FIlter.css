@@ -1,0 +1,22 @@
+.filterParent{
+    @apply md:border rounded-sm md:border-l-0
+                mb-3 p-3 mx-auto md:mx-0 w-2/3 md:w-56
+                dark:text-white  overflow-hidden
+    ;
+}
+
+
+
+/* SEARCH COMPONENT  */
+.search-input{
+    @apply p-1  outline-none border rounded-sm text-black  w-full;
+}
+
+/* CATEGORIES COMPONENT  */
+.cat-item{
+    @apply py-1 cursor-pointer hover:text-gray-400 ;
+}
+.cat-parent {
+    @apply my-4 pl-2 border-l border-gray-400;
+}
+

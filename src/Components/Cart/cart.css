@@ -1,0 +1,23 @@
+
+.edit-item{
+    @apply flex justify-between items-center ;
+}
+
+/* To Hide Arrows in Input[type: number ] */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    @apply border-0 outline-none appearance-none text-center bg-transparent w-10 m-4 ;
+    -moz-appearance: textfield;
+}
+input[type=number]:focus {
+    border: 1px solid rgba(0, 0, 0, 0.418);
+}
+
+.remove-btn{
+    @apply bg-red-600 text-white p-2 transition hover:shadow-lg shadow-red-600 rounded-md h-2/3;
+}
